@@ -1,5 +1,7 @@
 # opencv_1
 #Linux 下用命令行编译显示图片
-       gcc Test.c -o Test `pkg-config --flags --libs opencv`   
+       gcc Test.c -o Test `pkg-config --cflags --libs opencv`   
        ./ xxx.jpg
-
+       pkg-config的功能
+       检查库的版本号。如果所需要的库的版本不满足要求，它会打印出错误信息，避免链接错误版本的库文件。 获得编译预处理参数，如宏定义，头文件的位置。 获得链接参数，如库及依赖的其它库的位置，文件名及其它一些连接参数。 自动加入所依赖的其它库的设置
+       选项--cflags 它是用来指定程序在编译时所需要头文件所在的目录,选项 --libs则是指定程序在链接时所需要的动态链接库的目录
